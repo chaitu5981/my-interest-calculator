@@ -253,8 +253,17 @@ function App() {
   };
 
   return (
-    <div className="bg-orange-200 min-h-screen p-3 pt-[5rem]">
+    <div className="bg-orange-200 min-h-screen p-3 pt-[2rem]">
       <div className="w-[50%] mb-2">
+        <h1 className="text-2xl my-3 mx-auto w-full text-center">
+          Loan Interest calculator with random repayments
+        </h1>
+        <p className="ml-3 my-2">
+          We generally repay loan in fixed emi amounts and in fixed intervals
+          when taken from a bank. But this app calculates interest when we take
+          loan from a friend or money lender and repay loan with random amounts
+          and at random dates.
+        </p>
         <div className="w-full flex  items-center px-3 ">
           <label
             htmlFor="principal"
@@ -315,7 +324,9 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="px-4 mt-5">Enter Repayments :</div>
+      <div className="px-4 mt-5">
+        Enter Repayments(You can add any number of repayments) :
+      </div>
       <div className="w-[50%]  mt-2">
         <div className="w-full flex  items-center px-3 ">
           <label
@@ -360,7 +371,7 @@ function App() {
               className="border-[1px] bg-gray-500 text-white m-2 px-2  py-1 rounded"
               onClick={addRepayment}
             >
-              Add
+              Submit
             </button>
           </div>
         </div>
@@ -380,14 +391,14 @@ function App() {
             name="endDate"
             value={endDate}
             onChange={handleChange2}
-            className="p-1 border-[1px] border-black m-2 rounded"
+            className="p-1 border-[1px] border-black my-2 rounded"
           />
           <button
             type="button"
             onClick={addEndDate}
             className="border-[1px] bg-gray-500 text-white ml-7 px-2 py-1 rounded"
           >
-            Add
+            Submit
           </button>
         </div>
       </div>
