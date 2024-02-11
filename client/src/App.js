@@ -27,15 +27,15 @@ function App() {
   let finalAmount;
   let interestAmounts = [];
 
-  useEffect(() => {
-    const results = JSON.parse(localStorage.getItem("results"));
-    const repayments1 = JSON.parse(localStorage.getItem("repayments"));
-    if (results && repayments1) {
-      setFinalResults([...results]);
-      setRepayments([...repayments1]);
-      setShowDisplayResults(true);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const results = JSON.parse(localStorage.getItem("results"));
+  //   const repayments1 = JSON.parse(localStorage.getItem("repayments"));
+  //   if (results && repayments1) {
+  //     setFinalResults([...results]);
+  //     setRepayments([...repayments1]);
+  //     setShowDisplayResults(true);
+  //   }
+  // }, []);
 
   const handleChange = ({ target }) => {
     const { name, value } = target;
@@ -244,10 +244,10 @@ function App() {
         },
       ];
     }
-    if (results.length) {
-      localStorage.setItem("results", JSON.stringify(results));
-      localStorage.setItem("repayments", JSON.stringify(repayments));
-    }
+    // if (results.length) {
+    //   localStorage.setItem("results", JSON.stringify(results));
+    //   localStorage.setItem("repayments", JSON.stringify(repayments));
+    // }
     setFinalResults([...results]);
     setShowDisplayResults(true);
   };
